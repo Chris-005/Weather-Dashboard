@@ -35,7 +35,7 @@ class WeatherService {
 
   constructor() {
     this.baseURL = `api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`;
-    this.apiKey = '2cae6179f5b28a07bf487342eb2ed157';
+    this.apiKey = process.env.WEATHER_API_KEY || '';
     this.cityName = '';
 
   }
